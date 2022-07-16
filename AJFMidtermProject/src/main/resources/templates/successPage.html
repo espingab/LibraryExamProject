@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.output {
+		margin-top: 260px;
+		margin-bottom: 260px;
+	}
+	
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="container">
+		<div th:if="${book != null}">
+			<div class="title">
+				<h1>YOU HAVE SUCCESSFULLY BORROWED:</h1>
+			</div>
+			<div class="output">
+				<h1 th:text="${book.bookName}"></h1>
+			</div>
+		</div>
+		
+		<div class="links">
+			<a href="/borrowBookPage">Borrow Another Book</a>
+			<br>
+			<br>
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.output {
+		margin-top: 200px;
+		margin-bottom: 200px;
+	}
+	
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="title">
+			<h1>THE INFORMATION YOU ENTERED WAS NOT VALID</h1>
+		</div>
+		
+		<div class="output">
+			<h2>The Name Entered Already Has A Library Card Registered Or You Missed Some Information</h2>
+		</div>
+		
+		<div class="links">
+			<a href="/signUpPage">Try Again</a>
+			<br>
+			<br>
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+	</div>
+	
+</body>
+</html>

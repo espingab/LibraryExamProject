@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+
+	.returnContainer {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-areas:
+			"title"
+			"info"
+			"form"
+			"table"
+			"links"
+	}
+	
+	.form {
+		margin-top: 160px;
+		margin-bottom: 60px;
+	}
+	
+	td, th {
+		border: none;
+		border-collapse: collapse;
+	}
+	
+	.table {
+		margin: auto auto;
+		margin-top: 50px;
+		margin-bottom: 75px;
+	}
+
+</style>
+<title>Return a Book</title>
+</head>
+<body>
+
+	<div class="returnContainer">
+	
+		<div class="title">
+			<h1>Return A Book Back To The Library of Birmingham</h1>
+		</div>
+		
+		<div class="info">
+			<h3>Enter Your Library Card Number To View The Books <br> You Are Currently Borrowing</h3>
+		</div>
+		
+		<div class="form">
+			<form th:action="@{/getBooks}">
+				<label>Library Card #: </label>
+				<input type="number" name="cardNumber">
+				<br>
+				<br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		
+		<div class="table">
+			<table th:if="${bookList != null and !bookList.empty}">
+				<tr>
+					<th>Name</th>
+					<th>Barcode</th>
+					<th>&nbsp;</th>
+				</tr>
+				<tr th:each="b : ${bookList}">
+					<td th:text="${b.bookName}"></td>
+					<td th:text="${b.bookBarcode}"></td>
+					<td><a th:href="@{/returnBook/} + ${b.bookBarcode}">RETURN</a><td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="links">
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+		
+	</div>
+
+</body>
+</html>

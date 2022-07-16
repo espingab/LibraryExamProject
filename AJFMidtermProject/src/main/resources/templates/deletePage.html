@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.deleteContainer {
+			display: grid;
+			grid-auto-flow: column;
+			grid-template-areas:
+				"title"
+				"info"
+				"form"
+				"links"
+	}
+	
+	.form {
+		margin-top: 85px;
+		margin-bottom: 85px;
+	}
+	
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="deleteContainer">
+		
+		<div class="title">
+			<h1>Delete Your Library of Birmingham Card</h1>
+		</div>
+		
+		<div class="info">
+			<h4>Insert Your Card Number To Delete Your Library Card</h4>
+		</div>
+		
+		<div class="form">
+			<form th:action="@{/deleteCard}">
+				<label>Name: </label><br>
+				<input type="text" name="name"><br>
+				<br>
+				<label>Age: </label><br>
+				<input type="number" name="age"><br>
+				<br>
+				<label>Library Card #: </label><br>
+				<input type="number" name="cardNumber"><br>
+				<br>
+				<br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		
+		<div class="links">
+			<br>
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+		
+	</div>
+
+</body>
+</html>

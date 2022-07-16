@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+
+	.output {
+		margin-top: 170px;
+		margin-bottom: 170px;
+	}
+
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="title">
+			<h1>THE INFORMATION YOU ENTERED WAS NOT VALID</h1>
+		</div>
+		
+		<div class="output">
+			<h2>These are one of the causes:</h2>
+				The library card number does not exist.<br>
+				The name entered is incorrect.<br>
+				The age entered is incorrect.<br>
+				There are books that have still not been returned.<br>
+		</div>
+		
+		<div class="links">
+			<a href="/deletePage">Try Again</a>
+			<br>
+			<br>
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

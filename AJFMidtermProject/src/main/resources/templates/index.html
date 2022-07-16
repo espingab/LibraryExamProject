@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<title>10 Interesting Facts About United Kingdom</title>
+</head>
+<body>
+	<div class="content">
+		<div class="title">
+			<h1>10 Interesting Facts About United Kingdom</h1>
+			<img th:src="@{/images/unitedKingdom.png}" />
+		</div>
+		
+		
+		<div class="facts">
+			<ol>
+				<li>Tea is the most famous drink among Brits, it’s estimated that they drink 165 million cups of tea every year</li>
+				<li>The monument of Stonehenge is claimed to be one of the oldest monuments in the world, scientists believe that it was built over in 3000 B.C.
+					<br><a href="/stonehengePage">Check Out the Stonehenge</a></li>
+				<li>Golf was invented in Scotland and is considered a national sport today</li>
+				<li>Queen Elizabeth is the longest-reigning Queen in the world</li>
+				<li>The smallest statue in London is of two mice fighting over a piece of cheese
+					<br><a href="/smallStatuePage">Check Out the Smallest Statue</a></li>
+				<li>The first woman Prime Minister of the UK was Margaret Thatcher, the longest serving PM of the UK </li>
+				<li>The first speeding ticket was issued in the UK in the year 1896, speed limit was 2mph and he was driving at the speed of 8mph </li>
+				<li>Adder happens to be the only venomous snake in the UK</li>
+				<li>During the 16th century, the king raised a tax for everyone with a beard</li>
+				<li>London has one of the biggest Libraries in the world called The Library of Birmingham, it has over 170 million items in in its 
+					catalog. On the left side of the screen you have the ability to borrow a book from The Library of Birmingham</li>
+			</ol>
+		</div>
+		
+		<div class="links1">
+			<p>There are 7 books you can borrow from The Library of Birmingham, but you first need a Library Card:</p>
+			<a href="/signUpPage">Sign Up For A Library Card</a>
+			<p>If you already have a card, click the link below:</p>
+			<a href="/borrowBookPage">Borrow A Book</a>
+		</div>
+		
+		<div class="links2">
+			<p>Have a book to return?</p>
+			<a href="/returnPage">Return Your Books</a>
+			<p>Want to delete your Library Card?</p>
+			<a href="/deletePage">Delete Your Library Card</a>
+		</div>
+	</div>
+</body>
+</html>

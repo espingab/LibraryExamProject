@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.container {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-areas:
+			"title"
+			"form"
+			"links"
+	}
+	
+	.form {
+		grid-area: form;
+		color: red;
+		font-size: 20px;
+		font-family: "Courier New";
+		margin: auto auto;
+		margin-top: 169px;
+		margin-bottom: 169px;
+	}
+	
+	
+</style>
+<title>Library Card Sign Up</title>
+</head>
+<body>
+
+	<div class="container">
+		<div class="title">
+			<h1>The Library of Birmingham: Library Card Sign Up</h1>
+		</div>
+		
+		<div class="form">
+			<form method="post" th:action="@{/createPersonAndCard}" th:object="${person}">
+		 		<input type="hidden" name="id" th:field="*{id}">
+		 		
+				<label>Name: </label> <br>
+				<input type="text" name="name" th:field="*{name}">
+				<br>
+				<br>
+				<label>Age: </label> <br>
+				<input type="number" name="age" th:field="*{age}">
+				
+				
+				<br>
+				<br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		
+		<div class="links">
+			<a href="/borrowBookPage">Check Out The Books You Can Borrow</a>
+			<br>
+			<br>
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+	</div>
+	
+	
+
+</body>
+</html>

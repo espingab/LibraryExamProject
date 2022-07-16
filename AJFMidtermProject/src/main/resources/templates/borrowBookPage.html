@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.borrowContainer {
+		display: grid;
+		grid-auto-flow: column;
+		grid-template-areas:
+			"title title"
+			"table table"
+			"info info"
+			"form form"
+			"links links"
+	}
+	
+	.form {
+		margin-top: 75px;
+		margin-bottom: 75px;
+	}
+	
+</style>
+<title>Borrow a Book</title>
+</head>
+<body>
+	
+	<div class="borrowContainer">
+		<div class="title">
+			<h1>Borrow A Book From The Library of Birmingham</h1>
+		</div>
+		<div class="info">
+			<p>Enter required information below to borrow a book.</p>
+		</div>
+		<div class="form">
+			<form th:action="@{/borrowBook}">
+				<label>Library Card #: </label><br>
+				<input type="number" name="cardNumber">
+				<br>
+				<br>
+				<label>Barcode: </label><br>
+				<input type="text" name="barcode">
+				<br>
+				<br>
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		
+		<div class="table">
+			<table th:if="${bookList != null and !bookList.empty}">
+				<tr>
+					<th>Name</th>
+					<th>Barcode</th>
+					<th>Description</th>
+					<th>Status</th>
+				</tr>
+				<tr th:each="b : ${bookList}">
+					<td th:text="${b.bookName}"></td>
+					<td th:text="${b.bookBarcode}"></td>
+					<td th:text="${b.description}"></td>
+					<td th:text="${b.status}"></td>
+				</tr>
+			</table>
+		</div>
+		
+		<br>
+		<div class="links">
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+	</div>
+
+</body>
+</html>

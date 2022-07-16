@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.info {
+		font-size: 25px;
+		font-family: "Courier New";
+		font-weight: bold;
+		color: red;
+		margin-top: 100px;
+		margin-left: 270px;
+		margin-right: 270px;
+		margin-bottom: 50px;
+	}
+	
+	img {
+		max-width: 800px;
+		width: 500px;
+	}
+	
+</style>
+<title>Stonehenge</title>
+</head>
+<body>
+
+	<div class="title">
+		<h1>The Stonehenge</h1>
+		<img th:src="@{/images/stonehengeImg.jpg}" />
+	</div>
+	
+	<div class="info">
+		<p>
+			Stonehenge is perhaps the world’s most famous prehistoric monument. 
+			It was built in several stages: the first monument was an early henge monument, 
+			built about 5,000 years ago, and the unique stone circle was erected in the late 
+			Neolithic period about 2500 BC. In the early Bronze Age many burial mounds were 
+			built nearby.
+		</p>
+	</div>
+	
+	<div class="links">
+		<a href="http://localhost:8080/">Back</a>
+	</div>
+	
+</body>
+</html>

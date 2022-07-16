@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.output {
+		margin-top: 230px;
+		margin-bottom: 230px;
+	}
+	
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<div class="container">
+		<div th:if="${person != null}">
+			<div class="title">
+				<h1>THANK YOU FOR SIGNING UP</h1>
+			</div>
+			<div class="output">
+				<h2>YOUR CARD NUMBER IS:</h2>
+				<h2 th:text="${person.libraryCard.cardNumber}"></h2>
+			</div>
+		</div>
+		
+		<div class="links">
+			<a href="/borrowBookPage">Click Here to Borrow Books</a>
+			<br>
+			<br>
+			<a href="http://localhost:8080/">Go Back To Main Page</a>
+		</div>
+	</div>
+	
+	
+</body>
+</html>

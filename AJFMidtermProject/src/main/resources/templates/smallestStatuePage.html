@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<style>
+	
+	.info {
+		font-size: 25px;
+		font-family: "Courier New";
+		font-weight: bold;
+		color: red;
+		margin-top: 100px;
+		margin-left: 270px;
+		margin-right: 270px;
+		margin-bottom: 50px;
+	}
+	
+	img {
+		max-width: 800px;
+		width: 500px;
+	}
+	
+</style>
+<title>The Smallest Statue</title>
+</head>
+<body>
+	
+	<div class="title">
+		<h1>The Smallest Statue</h1>
+		<img th:src="@{/images/smallStatue.jpg}" />
+	</div>
+	
+	<div class="info">
+		<p>
+			 It is the site of London's smallest public statue, The Two Mice Eating Cheese,
+			 on a building near the junction with Eastcheap. The sculpture supposedly 
+			 commemorates the death of two workmen, who are said to have fallen from 
+			 scaffolding either during the construction of the building in 1862, or 
+			 during the construction of the nearby Monument to the Great Fire of London in the 
+			 1670s. Some versions of the story have both of them dying, others say 
+			 that one pushed the other from the roof. The story goes that the workmen 
+			 were arguing over the theft of a sandwich, which was later revealed to have 
+			 been taken by mice.
+		</p>
+	</div>
+	
+	
+	<div class="links">
+		<a href="http://localhost:8080/">Back</a>
+	</div>
+	
+
+</body>
+</html>
